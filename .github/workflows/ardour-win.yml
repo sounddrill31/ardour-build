@@ -160,7 +160,7 @@ jobs:
         uses: xresloader/upload-to-github-release@v1
         with: 
           file: ${{ github.workspace }}/tmp/Ardour-*-${{ matrix.config.warch }}-Setup.exe
-          name: ${{ github.run_id }}
+          name: ${{ github.run_id }} ${{ env.ARDOUR_VERSION }}
           tag_name: ${{ github.run_id }}
           draft: true
         env:
