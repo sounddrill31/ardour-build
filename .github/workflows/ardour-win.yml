@@ -31,10 +31,19 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-              arch: [x86_64,i686]
-              warch: [w64,w32]
-              image_repo: [debian]
-              image_tag: [buster]
+        config:
+          - {
+              arch: x86_64,
+              warch: w64,
+              image_repo: debian,
+              image_tag: buster
+            }
+          - {
+              arch: i686,
+              warch: w32,
+              image_repo: debian,
+              image_tag: buster
+            }
     container:
       image: ${{ matrix.config.image_repo }}:${{ matrix.config.image_tag }}
       options: -v ${{ github.workspace }}:/home/ardour:rw
