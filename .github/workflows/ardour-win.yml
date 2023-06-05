@@ -155,6 +155,7 @@ jobs:
           name: Ardour-Cross-Compile-Win-Artifact
           path: |
             ${{ github.workspace }}/tmp/Ardour-*-${{ matrix.config.warch }}-Setup.exe
+            
       - name: Upload to Release
         uses: xresloader/upload-to-github-release@v1
         with: 
