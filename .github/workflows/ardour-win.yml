@@ -33,9 +33,8 @@ jobs:
       matrix:
               arch: [x86_64,i686]
               warch: [w64,w32]
-              image_repo: debian
-              image_tag: buster
-            }
+              image_repo: [debian]
+              image_tag: [buster]
     container:
       image: ${{ matrix.config.image_repo }}:${{ matrix.config.image_tag }}
       options: -v ${{ github.workspace }}:/home/ardour:rw
