@@ -201,3 +201,13 @@ jobs:
           name: Ardour-Linux-Artifact
           path: |
             ${{ github.workspace }}/src/tools/linux_packaging/Ardour_${{ matrix.config.arch }}-*.run
+            
+      - name: Upload to Release
+        uses: xresloader/upload-to-github-release@v1
+        with: 
+          file: ${{ github.workspace }}/src/tools/linux_packaging/Ardour_${{ matrix.config.arch }}-*.run
+          name: ${{ github.run_id }}
+          tag_name: ${{ github.run_id }}
+          draft: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
