@@ -32,21 +32,21 @@ jobs:
       fail-fast: false
       matrix:
         config:
-           - {
+          - {
               arch: x86_64,
               image_repo: debian,
               image_tag: bullseye
-             }
-           - {
-               arch: armhf,
-               image_repo: debian,
-               image_tag: buster
-             }        
-           - {
-               arch: arm64,
-               image_repo: debian,
-               image_tag: buster
-             }
+            }
+          # - {
+          #     arch: armhf,
+          #     image_repo: debian,
+          #     image_tag: buster
+          #   }        
+          # - {
+          #     arch: arm64,
+          #     image_repo: debian,
+          #     image_tag: buster
+          #   }
     container:
       image: ${{ matrix.config.image_repo }}:${{ matrix.config.image_tag }}
       options: -v ${{ github.workspace }}:/home/ardour:rw
@@ -200,8 +200,7 @@ jobs:
         with:
           name: Ardour-Linux-Artifact
           path: |
-            ${{ github.workspace }}/src/tools/linux_packaging/Ardour_${{ matrix.config.arch }}-*.run
-            
+            ${{ github.workspace }}/src/tools/linux_packaging/Ardour_${{ matrix.config.arch }}-*.run            
       - name: Upload to Release
         uses: xresloader/upload-to-github-release@v1
         with: 
