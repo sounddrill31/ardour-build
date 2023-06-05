@@ -32,11 +32,11 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - {
+            - {
               arch: x86_64,
               image_repo: debian,
               image_tag: bullseye
-            }
+             }
           # - {
           #     arch: armhf,
           #     image_repo: debian,
