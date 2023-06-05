@@ -689,7 +689,7 @@ Cflags: -I\${includedir}"
 EOF
 
 ################################################################################
-src libusb-1.0.20 tar.bz2 https://github.com/libusb/libusb/releases/download/v1.0.26/libusb-1.0.26.tar.bz2
+src libusb-1.0.26 tar.bz2 https://github.com/libusb/libusb/releases/download/v1.0.26/libusb-1.0.26.tar.bz2
 (
   MAKEFLAGS= \
   autoconfbuild
