@@ -31,17 +31,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        config:
-          - {
-              arch: x86_64,
-              warch: w64,
-              image_repo: debian,
-              image_tag: buster
-            }
-          - {
-              arch: i686,
-              warch: w32,
-              image_repo: debian,
+              arch: [x86_64,i686]
+              warch: [w64,w32]
+              image_repo: debian
               image_tag: buster
             }
     container:
