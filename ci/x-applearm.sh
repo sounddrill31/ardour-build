@@ -320,9 +320,9 @@ ed Makefile.in << EOF
 wq
 EOF
 autoconfbuild --enable-libxml2
-
+src libarchive-3.6.1 tar.gz https://github.com/libarchive/libarchive/releases/download/v3.6.2/libarchive-3.6.2.tar.gz
 #src libarchive-3.2.1 tar.gz http://www.libarchive.org/downloads/libarchive-3.2.1.tar.gz
-src libarchive-3.6.1 tar.bz2 https://anaconda.org/conda-forge/libarchive/3.6.1/download/osx-64/libarchive-3.6.1-h6d8d9f1_0.tar.bz2
+#src libarchive-3.6.1 tar.bz2 https://anaconda.org/conda-forge/libarchive/3.6.1/download/osx-64/libarchive-3.6.1-h6d8d9f1_0.tar.bz2
 autoconfbuild --disable-bsdtar --disable-bsdcat --disable-bsdcpio --without-openssl
 
 src pixman-0.38.4 tar.gz https://www.cairographics.org/releases/pixman-0.38.4.tar.gz
