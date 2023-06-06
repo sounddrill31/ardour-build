@@ -644,7 +644,7 @@ for m in $MODS ; do
 done
 
 if ! test -d ${SRCCACHE}/jack_headers.git.reference; then
-	git clone --mirror git://github.com/jackaudio/headers.git ${SRCCACHE}/jack_headers.git.reference
+	git clone --mirror https://github.com/jackaudio/headers.git ${SRCCACHE}/jack_headers.git.reference
 fi
 
 if test -z "$OSX" -a ! -d ${SRCCACHE}/ardour.git.reference; then
@@ -1666,7 +1666,7 @@ if [ x$OSX != x -o x$weakjack != x ] ; then
 		cd $PREFIX
 		git clone \
 			--reference ${SRCCACHE}/jack_headers.git.reference \
-			git://github.com/jackaudio/headers.git \
+			https://github.com/jackaudio/headers.git \
 			jack_headers
 		cd jack_headers;
 		git reset --hard 23c29914806edefb496af098e937cc09e472bbbe
