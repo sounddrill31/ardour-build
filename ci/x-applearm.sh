@@ -281,7 +281,8 @@ EOF
 AUTOMAKE_FLAGS="--gnu --add-missing --copy -f" ./autogen.sh --build=x86_64-apple-darwin --host=${XHOST}
 autoconfbuild --disable-fftw --disable-sndfile
 
-src expat-2.2.9 tar.xz https://github.com/libexpat/libexpat/releases/download/R_2_2_9/expat-2.2.9.tar.xz
+#src expat-2.2.9 tar.xz https://github.com/libexpat/libexpat/releases/download/R_2_2_9/expat-2.2.9.tar.xz
+src expat-2.5.0 tar.xz https://github.com/libexpat/libexpat/releases/download/R_2_5_0/expat-2.5.0.tar.xz
 autoconfbuild
 
 src libiconv-1.16 tar.gz https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.16.tar.gz
