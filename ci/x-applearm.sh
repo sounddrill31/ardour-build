@@ -511,7 +511,7 @@ make $MAKEFLAGS
 make install
 
 ################################################################################
-src boost_1_68_0 tar.bz2 http://sourceforge.net/projects/boost/files/boost/1.68.0/boost_1_68_0.tar.bz2
+src boost_1_82_0 tar.bz2 https://boostorg.jfrog.io/artifactory/main/release/1.82.0/source/boost_1_82_0.tar.bz2
 ./bootstrap.sh --prefix=$PREFIX --with-libraries=exception,atomic
 LC_ALL=C sed -i.bak 's/4\.0\.0/0.0.0/' tools/build/src/tools/darwin.jam
 LC_ALL=C sed -i.bak 's/arch arm/arch arm64/' tools/build/src/tools/darwin.jam
