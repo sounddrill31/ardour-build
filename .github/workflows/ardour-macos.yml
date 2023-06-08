@@ -129,7 +129,8 @@ jobs:
         if: matrix.config.arch == 'arm64'
         shell: bash
         run: |
-          bash ${{ github.workspace }}/ci/x-applearm.sh
+          #bash ${{ github.workspace }}/ci/x-applearm.sh
+          bash ${{ github.workspace }}/ci/osx_build
 
       - name: Compile
         # --depstack-root defaults to ~ 
