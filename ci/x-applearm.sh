@@ -325,11 +325,11 @@ src libarchive-3.6.2 tar.gz https://github.com/libarchive/libarchive/releases/do
 #src libarchive-3.2.1 tar.gz http://www.libarchive.org/downloads/libarchive-3.2.1.tar.gz
 #src libarchive-3.6.1 tar.bz2 https://anaconda.org/conda-forge/libarchive/3.6.1/download/osx-64/libarchive-3.6.1-h6d8d9f1_0.tar.bz2
 autoconfbuild --disable-bsdtar --disable-bsdcat --disable-bsdcpio --without-openssl
-#src pixman-0.42.0 tar.gz https://www.cairographics.org/releases/pixman-0.42.0.tar.gz
-src pixman-0.38.4 tar.gz https://www.cairographics.org/releases/pixman-0.38.4.tar.gz
+src pixman-0.42.2 tar.gz https://cairographics.org/releases/pixman-0.42.2.tar.gz
+#src pixman-0.38.4 tar.gz https://www.cairographics.org/releases/pixman-0.38.4.tar.gz
 autoconfbuild
-#src cairo-1.16.0 tar.xz https://www.cairographics.org/releases/cairo-1.16.0.tar.xz
-src cairo-1.14.10 tar.xz http://cairographics.org/releases/cairo-1.14.10.tar.xz
+src rcairo-1.17.8 tar.xz https://cairographics.org/releases/rcairo-1.17.8.tar.gz
+#src cairo-1.14.10 tar.xz http://cairographics.org/releases/cairo-1.14.10.tar.xz
 patch -p1 < $this_script_dir/misc-patches/cairo-quartz-surface-ref.patch
 ed Makefile.in << EOF
 %s/ test perf//
