@@ -706,10 +706,10 @@ cd ${BUILDD}
 #git clone --reference ${SRCDIR}/soundfind.git.reference --depth 1 git://github.com/aardvarkk/soundfind.git || true
 git clone ${SRCDIR}/soundfind.git.reference soundfind || true
 
-download pa_waves3.diff http://robin.linuxaudio.org/tmp/pa_waves3.diff
+#download pa_waves3.diff http://robin.linuxaudio.org/tmp/pa_waves3.diff
 #src portaudio tgz http://portaudio.com/archives/pa_stable_v19_20140130.tgz
 src portaudio-svn1963 tgz http://ardour.org/files/deps/portaudio-svn1963.tgz
-patch -p1 < ${SRCDIR}/pa_waves3.diff
+#patch -p1 < ${SRCDIR}/pa_waves3.diff
 # build for winXP (no WASAPI)
 autoconfconf --with-asiodir=${BUILDD}/soundfind/ASIOSDK2/ --with-winapi=asio,wmme --without-jack
 ed Makefile << EOF
