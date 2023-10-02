@@ -1,6 +1,9 @@
 name: Ardour Build for Linux
 
 on:
+  workflow_dispatch:
+    branches: 
+      - linux
   push:
     branches: 
       - linux
