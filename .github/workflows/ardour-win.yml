@@ -3,13 +3,13 @@ name: Ardour Cross Compile Build for Windows
 on:
   workflow_dispatch:
     branches: 
-      - win
+      - win8.0
     paths-ignore:
       - 'README.md'
       - 'LICENSE'
   pull_request:
     branches: 
-      - win
+      - win8.0
     paths-ignore:
       - 'README.md'
       - 'LICENSE'
@@ -17,7 +17,7 @@ on:
     types: ardour-win-build
 
 env:
-  ARDOUR_VERSION: 8
+  ARDOUR_VERSION: 8.0
   # available upload services: wetransfer.com, file.io, 0x0.st
   UPLOAD_SERVICE: 0x0.st
   # ardour spurce code tar ball, need check its sha256sums.
